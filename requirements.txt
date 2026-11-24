@@ -1,0 +1,29 @@
+# Tested with Python 3.10 on an NVIDIA RTX A6000 (CUDA 12.6).
+# Install PyTorch first with the build that matches your CUDA version, for example:
+#   pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cu126
+# then:
+#   pip install -r requirements.txt
+
+torch==2.14.1
+transformers==5.20.2
+accelerate==1.15.0
+huggingface_hub==2.4.0
+safetensors==0.8.0
+tokenizers==0.23.3
+datasets==5.2.0
+
+# Quantization
+bitsandbytes==0.50.2   # INT8 (LLM.int8)
+torchao==0.18.0        # INT4 (weight-only, tinygemm kernel)
+
+# GPU energy measurement (NVML). Do not also install the deprecated nvidia-ml-py3 package.
+nvidia-ml-py==13.615.71
+
+numpy==1.26.4
+pandas==2.3.3
+scipy==1.15.3
+matplotlib==3.10.9
+python-dotenv==1.2.4
+
+# Jupyter kernel
+ipykernel==7.3.0
